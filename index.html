@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Primary Meta Tags -->
+  <title>Dinesh Rajkumar | Full-Stack Developer & AI Specialist</title>
+  <meta name="title" content="Dinesh Rajkumar | Full-Stack Developer & AI Specialist" />
+  <meta name="description" content="Portfolio of Dinesh Rajkumar — Full-Stack Developer specializing in Python, Generative AI, LLMs, and high-performance web applications. Turning ideas into intelligent products." />
+  <meta name="keywords" content="Dinesh Rajkumar, Full-Stack Developer, AI Developer, Python, GenAI, LLMs, Streamlit, Software Engineer, Portfolio" />
+  <meta name="author" content="Dinesh Rajkumar" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dineshrajkumar.dev/" />
+  <meta property="og:title" content="Dinesh Rajkumar | Full-Stack Developer & AI Specialist" />
+  <meta property="og:description" content="Turning ideas into intelligent products. Full-Stack engineering, Python systems, and AI-driven solutions." />
+  <meta property="og:image" content="assets/og-preview.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Dinesh Rajkumar | Full-Stack Developer & AI Specialist" />
+  <meta property="twitter:description" content="Turning ideas into intelligent products. Full-Stack engineering, Python systems, and AI-driven solutions." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Three.js for 3D Interactive Hero Canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Ambient Glow -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-grid"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Dinesh Rajkumar Home">
+        <span class="logo-box">DR</span>
+        <div class="brand-text">
+          <span class="brand-name">Dinesh Rajkumar</span>
+          <span class="brand-tag">Full-Stack &amp; AI</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+
+      <!-- Action CTAs -->
+      <div class="header-actions">
+        <button id="resume-btn" class="btn-secondary" title="View & Download Resume">
+          <i data-lucide="file-text"></i>
+          <span>Resume</span>
+        </button>
+        <a href="https://wa.me/919894141152?text=Hi%20Dinesh,%20I%20saw%20your%20developer%20portfolio%20and%20would%20love%20to%20connect!" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-primary-wa"
+           aria-label="Direct WhatsApp Message">
+          <i data-lucide="message-circle"></i>
+          <span>Chat on WhatsApp</span>
+        </a>
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#about" class="mobile-nav-item">About</a>
+      <a href="#projects" class="mobile-nav-item">Projects</a>
+      <a href="#skills" class="mobile-nav-item">Skills</a>
+      <a href="#experience" class="mobile-nav-item">Experience</a>
+      <a href="#contact" class="mobile-nav-item">Contact</a>
+      <div class="mobile-nav-actions">
+        <button id="mobile-resume-btn" class="btn-secondary w-full">
+          <i data-lucide="file-text"></i> View Resume
+        </button>
+        <a href="https://wa.me/919894141152?text=Hi%20Dinesh,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk!" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-primary-wa w-full">
+          <i data-lucide="message-circle"></i> WhatsApp Me (+91 9894141152)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION (3D Interactive Workspace) -->
+    <section id="hero" class="hero-section">
+      <div class="hero-canvas-wrapper">
+        <canvas id="hero-3d-canvas" aria-label="Interactive 3D Matrix Sphere"></canvas>
+        <div class="canvas-controls-hint">
+          <span class="hint-dot"></span>
+          <span>Interactive 3D Workspace • Drag to rotate &amp; explore</span>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-indicator"></span>
+          <span>Available for Full-Stack &amp; AI Engineering</span>
+        </div>
+
+        <h1 class="hero-title">
+          Turning ideas into <br />
+          <span class="gradient-text">intelligent products.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          I'm <strong>Dinesh Rajkumar</strong> — a Full-Stack Developer bridging scalable software engineering with practical Generative AI, Python systems, and data-driven intelligence.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn-hero-primary">
+            <span>Explore Projects</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+          <a href="https://wa.me/919894141152?text=Hi%20Dinesh,%20let's%20discuss%20a%20project!" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn-hero-secondary">
+            <i data-lucide="message-square"></i>
+            <span>Quick Connect (+91 9894141152)</span>
+          </a>
+          <a href="https://github.com/dinesh22032003" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn-hero-ghost"
+             aria-label="GitHub Profile">
+            <i data-lucide="github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+
+        <!-- Quick Metrics Banner -->
+        <div class="hero-stats-strip">
+          <div class="stat-pill">
+            <span class="stat-num">Full-Stack</span>
+            <span class="stat-lbl">Web &amp; APIs</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-pill">
+            <span class="stat-num">Python &amp; AI</span>
+            <span class="stat-lbl">GenAI / LLMs</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-pill">
+            <span class="stat-num">Data</span>
+            <span class="stat-lbl">Pandas &amp; SQL</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-pill">
+            <span class="stat-num">Impact</span>
+            <span class="stat-lbl">Venture Execution</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="user"></i>
+          <span>About Dinesh</span>
+        </div>
+        <h2 class="section-title">Engineering Mindset. Venture-Tested Execution.</h2>
+        <p class="section-desc">
+          A blend of computer science foundations, rigorous problem solving, and modern AI application engineering.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-story-card">
+          <div class="story-header">
+            <div class="avatar-container">
+              <div class="avatar-gradient">
+                <span class="avatar-initials">DR</span>
+              </div>
+              <div class="avatar-details">
+                <h3>Dinesh Rajkumar</h3>
+                <p>B.Tech Computer Science &amp; Engineering</p>
+              </div>
+            </div>
+            <span class="status-chip">
+              <i data-lucide="zap"></i> Active Builder
+            </span>
+          </div>
+
+          <div class="story-body">
+            <p>
+              My journey in tech began with a curiosity for how complex systems solve everyday bottlenecks. With a formal background in <strong>Computer Science &amp; Engineering</strong>, I have cultivated a strong architectural foundation in algorithms, databases, modern web interfaces, and backend services.
+            </p>
+            <p>
+              What sets my approach apart is the synthesis of <strong>technical depth</strong> and <strong>business reality</strong>. Having managed business operations and real-estate ventures alongside technical projects, I do not just write code for the sake of syntax — I build software that delivers tangible metrics, smooth user experiences, and automated efficiency.
+            </p>
+            <p>
+              Currently, I am diving deep into <strong>Advanced Python, Generative AI agent architectures, and LLM integrations</strong>, building prototypes like <em>Digitalcake</em> to explore next-generation intelligent interfaces.
+            </p>
+          </div>
+
+          <div class="story-highlights">
+            <div class="highlight-item">
+              <i data-lucide="terminal" class="highlight-icon"></i>
+              <div>
+                <strong>Modern Stack</strong>
+                <p>Python, JS, Streamlit, SQL, REST APIs</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="cpu" class="highlight-icon"></i>
+              <div>
+                <strong>GenAI &amp; Automation</strong>
+                <p>Prompt engineering, agentic pipelines &amp; models</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="trending-up" class="highlight-icon"></i>
+              <div>
+                <strong>Venture Acumen</strong>
+                <p>Resource optimization, team collaboration &amp; delivery</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal & Code Environment Showcase -->
+        <div class="about-terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">dinesh@rajkumar-core: ~/developer-profile</div>
+          </div>
+          <div class="terminal-body font-mono">
+            <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">cat profile.json</span></div>
+            <div class="term-output">
+              <pre>{
+  <span class="key">"name"</span>: <span class="str">"Dinesh Rajkumar"</span>,
+  <span class="key">"title"</span>: <span class="str">"Full-Stack Developer &amp; AI Builder"</span>,
+  <span class="key">"education"</span>: <span class="str">"B.Tech in CSE"</span>,
+  <span class="key">"core_focus"</span>: [
+    <span class="str">"Generative AI &amp; LLM Apps"</span>,
+    <span class="str">"Python Backend &amp; Data Analysis"</span>,
+    <span class="str">"Modern Interactive Web Applications"</span>
+  ],
+  <span class="key">"current_learning"</span>: <span class="str">"Advanced Python, Agentic AI Systems"</span>,
+  <span class="key">"flagship_project"</span>: <span class="str">"Digitalcake (AI Prototype)"</span>,
+  <span class="key">"contact_wa"</span>: <span class="str">"+91 9894141152"</span>,
+  <span class="key">"status"</span>: <span class="str">"Ready for high-impact roles"</span>
+}</pre>
+            </div>
+            <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">python -m developer.build_future</span></div>
+            <div class="term-output term-success">
+              ✓ Initialized Neural Workspace<br />
+              ✓ Optimized Full-Stack Architecture<br />
+              ✓ Ready for production deployment.
+            </div>
+            <div class="term-line"><span class="term-prompt">$</span> <span class="cursor-blink">█</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="layers"></i>
+          <span>Portfolio Works</span>
+        </div>
+        <h2 class="section-title">Selected Projects &amp; Prototypes</h2>
+        <p class="section-desc">
+          Engineered for performance, clean architecture, and real-world utility.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- FLAGSHIP PROJECT: DIGITALCAKE -->
+        <div class="project-card flagship-card">
+          <div class="flagship-badge">
+            <i data-lucide="sparkles"></i> Flagship Project
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-type">AI-Driven Prototype &amp; Full-Stack App</span>
+              <span class="project-year">2025 – Active</span>
+            </div>
+            <h3 class="project-name">Digitalcake</h3>
+            <p class="project-summary">
+              An intelligent, full-stack software prototype engineered with Python, Generative AI capabilities, and modern responsive front-ends. Designed to streamline workflow intelligence and bridge dynamic prompt synthesis with scalable data logic.
+            </p>
+
+            <div class="tech-badge-cluster">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">GenAI / LLMs</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">Streamlit / Web</span>
+              <span class="tech-badge">SQL</span>
+              <span class="tech-badge">REST APIs</span>
+            </div>
+
+            <div class="project-features">
+              <div class="feature-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Intelligent multi-stage pipeline utilizing LLMs for automated task reasoning.</span>
+              </div>
+              <div class="feature-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Modular Python architecture with clean separation between AI agents and persistence layers.</span>
+              </div>
+              <div class="feature-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Dynamic UI designed for instantaneous user feedback and seamless responsiveness.</span>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn-primary preview-project-btn" data-project="digitalcake">
+                <i data-lucide="eye"></i> View Architecture &amp; Demo
+              </button>
+              <a href="https://github.com/dinesh22032003/portfolio" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                <i data-lucide="github"></i> Repository
+              </a>
+              <a href="https://wa.me/919894141152?text=Hi%20Dinesh,%20I'd%20like%20to%20learn%20more%20about%20Digitalcake!" target="_blank" rel="noopener noreferrer" class="btn-ghost-icon" title="Discuss on WhatsApp">
+                <i data-lucide="message-circle"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-preview-visual">
+            <div class="visual-mockup">
+              <div class="mockup-bar">
+                <span class="m-dot red"></span>
+                <span class="m-dot yellow"></span>
+                <span class="m-dot green"></span>
+                <span class="mockup-url">digitalcake.internal/ai-engine</span>
+              </div>
+              <div class="mockup-screen">
+                <div class="ai-wireframe">
+                  <div class="ai-node pulse-node"></div>
+                  <div class="ai-connector"></div>
+                  <div class="ai-box">
+                    <span class="ai-tag">LLM Orchestrator</span>
+                    <span class="ai-sub">Context Ingestion &amp; Synthesis</span>
+                  </div>
+                  <div class="ai-connector"></div>
+                  <div class="ai-box green-border">
+                    <span class="ai-tag">Structured Output</span>
+                    <span class="ai-sub">JSON / API Schema Delivery</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: STREAMLIT ANALYTICS ENGINE -->
+        <div class="project-card">
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-type">Data Science &amp; Intelligence</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-name">Smart Insights: Data Analysis Suite</h3>
+            <p class="project-summary">
+              An interactive analytics platform built with Streamlit, Pandas, and Python. Ingests raw multidimensional business datasets, executes exploratory automated data cleaning, and generates real-time visualization dashboards.
+            </p>
+            <div class="tech-badge-cluster">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Pandas</span>
+              <span class="tech-badge">Streamlit</span>
+              <span class="tech-badge">SQL</span>
+              <span class="tech-badge">Plotly</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn-secondary preview-project-btn" data-project="analytics">
+                <i data-lucide="sliders"></i> Details
+              </button>
+              <a href="https://github.com/dinesh22032003" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                <i data-lucide="github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: GENAI CONVERSATIONAL COPILOT -->
+        <div class="project-card">
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-type">Generative AI System</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-name">Contextual GenAI Assistant</h3>
+            <p class="project-summary">
+              Custom conversational copilot leveraging modern LLM APIs with structured prompt engineering and grounding. Capable of semantic document parsing, automated summarization, and domain-specific Q&amp;A.
+            </p>
+            <div class="tech-badge-cluster">
+              <span class="tech-badge">GenAI</span>
+              <span class="tech-badge">LLM APIs</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">REST API</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn-secondary preview-project-btn" data-project="genai-copilot">
+                <i data-lucide="bot"></i> Details
+              </button>
+              <a href="https://github.com/dinesh22032003" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                <i data-lucide="github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: HIGH PERFORMANCE WEB PLATFORM -->
+        <div class="project-card">
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-type">Full-Stack Web App</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-name">Modern Commercial Portal</h3>
+            <p class="project-summary">
+              End-to-end commercial web solution built with responsive HTML5, modern vanilla CSS architecture, JavaScript, and dynamic API integrations. Optimized for sub-second page loads and seamless mobile UX.
+            </p>
+            <div class="tech-badge-cluster">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3 / Grid</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">APIs</span>
+              <span class="tech-badge">Vercel</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn-secondary preview-project-btn" data-project="web-portal">
+                <i data-lucide="globe"></i> Details
+              </button>
+              <a href="https://github.com/dinesh22032003" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                <i data-lucide="github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX SECTION -->
+    <section id="skills" class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="cpu"></i>
+          <span>Capabilities</span>
+        </div>
+        <h2 class="section-title">Technical Skills &amp; Domain Expertise</h2>
+        <p class="section-desc">
+          Structured toolset spanning artificial intelligence, full-stack development, and data manipulation.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Category 1: AI & Python -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon-box">
+              <i data-lucide="sparkles"></i>
+            </div>
+            <div>
+              <h3>AI &amp; Python Ecosystem</h3>
+              <p>Core Engineering &amp; GenAI</p>
+            </div>
+          </div>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Python (Advanced)</span>
+                <span class="skill-level">Core Language</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Generative AI &amp; LLMs</span>
+                <span class="skill-level">Prompting &amp; APIs</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Streamlit</span>
+                <span class="skill-level">Rapid Web Apps</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Pandas &amp; Data Wrangling</span>
+                <span class="skill-level">Analytics &amp; ETL</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 82%;"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 2: Full-Stack Web -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon-box">
+              <i data-lucide="code-2"></i>
+            </div>
+            <div>
+              <h3>Web &amp; Full-Stack</h3>
+              <p>Frontend &amp; API Integration</p>
+            </div>
+          </div>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">HTML5 &amp; Semantic Web</span>
+                <span class="skill-level">Standards &amp; SEO</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">CSS3 / Modern Styling</span>
+                <span class="skill-level">Responsive / Animations</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript (ES6+)</span>
+                <span class="skill-level">Interactive DOM / Async</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 84%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">RESTful APIs</span>
+                <span class="skill-level">Design &amp; Consumption</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 86%;"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 3: Data, Databases & Tools -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon-box">
+              <i data-lucide="database"></i>
+            </div>
+            <div>
+              <h3>Data, Tools &amp; Workflow</h3>
+              <p>Databases &amp; Version Control</p>
+            </div>
+          </div>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">SQL (PostgreSQL / MySQL)</span>
+                <span class="skill-level">Queries &amp; Relational Data</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 84%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Git &amp; GitHub</span>
+                <span class="skill-level">Version Control &amp; Collab</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Vercel &amp; Cloud Deployment</span>
+                <span class="skill-level">CI/CD &amp; Hosting</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 82%;"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Problem Solving &amp; System Design</span>
+                <span class="skill-level">Engineering Mindset</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & VENTURES SECTION (Hybrid Track) -->
+    <section id="experience" class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="briefcase"></i>
+          <span>Track Record</span>
+        </div>
+        <h2 class="section-title">Experience &amp; Venture Leadership</h2>
+        <p class="section-desc">
+          Balancing technological innovation with practical business execution.
+        </p>
+      </div>
+
+      <div class="experience-dual-track">
+        <!-- Track 1: Software & AI -->
+        <div class="track-column">
+          <div class="track-header">
+            <div class="track-badge tech">
+              <i data-lucide="code"></i>
+            </div>
+            <h3>Software &amp; AI Engineering</h3>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">2024 – PRESENT</div>
+              <h4 class="timeline-role">AI Application &amp; Full-Stack Builder</h4>
+              <span class="timeline-company">Independent Innovation &amp; Prototypes</span>
+              <p class="timeline-text">
+                Developing AI-augmented applications with Python and modern web frameworks. Engineering prototypes such as <em>Digitalcake</em> to explore agentic workflows, contextual summarization, and automated data processing.
+              </p>
+              <div class="timeline-tags">
+                <span>Python</span>
+                <span>GenAI</span>
+                <span>Streamlit</span>
+                <span>FastAPI</span>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">2021 – 2024</div>
+              <h4 class="timeline-role">Computer Science &amp; Engineering</h4>
+              <span class="timeline-company">B.Tech Academic Foundation</span>
+              <p class="timeline-text">
+                Acquired comprehensive grounding in core computing principles, object-oriented programming, data structures, relational database management, and software development lifecycle.
+              </p>
+              <div class="timeline-tags">
+                <span>Data Structures</span>
+                <span>Algorithms</span>
+                <span>DBMS / SQL</span>
+                <span>Web Architecture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 2: Business & Ventures -->
+        <div class="track-column">
+          <div class="track-header">
+            <div class="track-badge business">
+              <i data-lucide="trending-up"></i>
+            </div>
+            <h3>Ventures &amp; Business Execution</h3>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">2023 – PRESENT</div>
+              <h4 class="timeline-role">Venture Operations &amp; Client Delivery</h4>
+              <span class="timeline-company">Real Estate &amp; Business Management</span>
+              <p class="timeline-text">
+                Managed operations, client relations, and negotiations for commercial/real-estate ventures. Implemented digital workflows and automation tools to optimize client inquiry pipelines and track transaction deliverables.
+              </p>
+              <div class="timeline-tags">
+                <span>Client Relations</span>
+                <span>Process Automation</span>
+                <span>Negotiation</span>
+                <span>Execution</span>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">Ongoing</div>
+              <h4 class="timeline-role">Product Strategy &amp; Commercialization</h4>
+              <span class="timeline-company">Technology-Driven Solutions</span>
+              <p class="timeline-text">
+                Applied cross-disciplinary business acumen to identify real-world market problems, translating user requirements into actionable software features and high-value prototypes.
+              </p>
+              <div class="timeline-tags">
+                <span>Product Strategy</span>
+                <span>Problem Discovery</span>
+                <span>Market Fit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & DIRECT CTA SECTION -->
+    <section id="contact" class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="mail"></i>
+          <span>Let's Build</span>
+        </div>
+        <h2 class="section-title">Start a Conversation</h2>
+        <p class="section-desc">
+          Open to full-time engineering roles, high-impact consulting, and AI collaborative ventures.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct Contact Cards -->
+        <div class="contact-details">
+          <!-- WhatsApp Card Highlight -->
+          <a href="https://wa.me/919894141152?text=Hi%20Dinesh,%20I%20would%20like%20to%20discuss%20an%20opportunity!" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="contact-channel-card highlight-wa">
+            <div class="channel-icon-box wa-color">
+              <i data-lucide="message-circle"></i>
+            </div>
+            <div class="channel-info">
+              <span class="channel-label">Instant WhatsApp Chat (Recommended)</span>
+              <span class="channel-value">+91 9894141152</span>
+              <span class="channel-sub">Fastest response • Tap to chat directly</span>
+            </div>
+            <i data-lucide="arrow-right" class="channel-arrow"></i>
+          </a>
+
+          <!-- GitHub Profile -->
+          <a href="https://github.com/dinesh22032003" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+            <div class="channel-icon-box">
+              <i data-lucide="github"></i>
+            </div>
+            <div class="channel-info">
+              <span class="channel-label">GitHub</span>
+              <span class="channel-value">Explore Repositories</span>
+              <span class="channel-sub">Code samples, prototypes, and commits</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="channel-arrow"></i>
+          </a>
+
+          <!-- Location & Availability -->
+          <div class="contact-channel-card static-card">
+            <div class="channel-icon-box">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <div class="channel-info">
+              <span class="channel-label">Location &amp; Work Model</span>
+              <span class="channel-value">India • Remote / Hybrid / Relocation</span>
+              <span class="channel-sub">Ready to deploy across timezones</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Direct Message Form -->
+        <div class="contact-form-card">
+          <form id="portfolio-contact-form" class="contact-form">
+            <h3 class="form-title">Send a Direct Message</h3>
+            
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input type="text" id="form-name" name="name" required placeholder="Jane Doe" class="form-input" />
+            </div>
+
+            <div class="form-group">
+              <label for="form-email">Your Email / WhatsApp</label>
+              <input type="text" id="form-email" name="contact" required placeholder="name@company.com or +91..." class="form-input" />
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject">Subject / Purpose</label>
+              <select id="form-subject" name="subject" class="form-input">
+                <option value="Full-Time Engineering Role">Full-Time Engineering Role</option>
+                <option value="AI / GenAI Project Collaboration">AI / GenAI Project Collaboration</option>
+                <option value="Consulting / Freelance Inquiry">Consulting / Freelance Inquiry</option>
+                <option value="General Networking">General Networking</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" rows="4" required placeholder="Hi Dinesh, we are interested in discussing..." class="form-input"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit w-full" id="submit-btn">
+              <i data-lucide="send"></i>
+              <span>Send Message</span>
+            </button>
+
+            <div id="form-feedback" class="form-feedback hidden"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RESUME PREVIEW MODAL -->
+  <div id="resume-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i data-lucide="file-text"></i>
+          <h3>Dinesh Rajkumar — Resume</h3>
+        </div>
+        <div class="modal-header-actions">
+          <button id="download-resume-btn" class="btn-primary-sm">
+            <i data-lucide="download"></i> Download PDF
+          </button>
+          <button id="close-resume-modal" class="modal-close-btn" aria-label="Close modal">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="resume-sheet">
+          <header class="resume-sheet-header">
+            <div>
+              <h1 class="resume-name">DINESH RAJKUMAR</h1>
+              <p class="resume-role">Full-Stack Developer | Python &amp; GenAI Specialist</p>
+            </div>
+            <div class="resume-contacts">
+              <p><i data-lucide="phone" class="inline-icon"></i> +91 9894141152</p>
+              <p><i data-lucide="map-pin" class="inline-icon"></i> Tamil Nadu, India</p>
+              <p><i data-lucide="github" class="inline-icon"></i> github.com/dinesh22032003</p>
+            </div>
+          </header>
+
+          <section class="resume-sec">
+            <h4 class="resume-sec-title">PROFESSIONAL SUMMARY</h4>
+            <p>
+              Versatile Full-Stack Developer with a degree in Computer Science and Engineering. Experienced in building intelligent Python backends, integrating Generative AI &amp; Large Language Models (LLMs), designing interactive web interfaces, and leveraging data workflows (Streamlit, Pandas, SQL). Proven track record of merging rigorous software engineering with business execution and venture operations.
+            </p>
+          </section>
+
+          <section class="resume-sec">
+            <h4 class="resume-sec-title">TECHNICAL SKILLS</h4>
+            <p><strong>Languages:</strong> Python (Advanced), JavaScript (ES6+), SQL, HTML5, CSS3</p>
+            <p><strong>AI &amp; Data:</strong> Generative AI, LLM Prompt Engineering, Streamlit, Pandas, NumPy, Data Cleaning</p>
+            <p><strong>Backend &amp; Web:</strong> FastAPI, REST APIs, Semantic Web, Responsive CSS Grid/Flexbox, Vercel</p>
+            <p><strong>Tools &amp; Practices:</strong> Git, GitHub, VS Code, Linux, CI/CD, Agile, Systems Architecture</p>
+          </section>
+
+          <section class="resume-sec">
+            <h4 class="resume-sec-title">FEATURED PROJECTS</h4>
+            <div class="resume-entry">
+              <div class="entry-header">
+                <strong>Digitalcake (Flagship AI &amp; Full-Stack Prototype)</strong>
+                <span>2025</span>
+              </div>
+              <p>• Engineered an AI-driven prototype combining Python LLM reasoning with clean web interfaces.</p>
+              <p>• Designed structured JSON schema generation and API pipelines for dynamic prompt execution.</p>
+            </div>
+            <div class="resume-entry">
+              <div class="entry-header">
+                <strong>Smart Insights Analytics Suite</strong>
+                <span>2024</span>
+              </div>
+              <p>• Built interactive Streamlit data application utilizing Pandas for exploratory analysis &amp; visualization.</p>
+            </div>
+          </section>
+
+          <section class="resume-sec">
+            <h4 class="resume-sec-title">EXPERIENCE &amp; VENTURES</h4>
+            <div class="resume-entry">
+              <div class="entry-header">
+                <strong>AI Application Developer &amp; Builder (Independent)</strong>
+                <span>2024 – Present</span>
+              </div>
+              <p>• Engineered end-to-end web apps, generative AI integrations, and automated pipelines.</p>
+            </div>
+            <div class="resume-entry">
+              <div class="entry-header">
+                <strong>Venture Operations &amp; Commercialization</strong>
+                <span>2023 – Present</span>
+              </div>
+              <p>• Managed real-estate &amp; business operations, streamlining client pipelines through digital tooling.</p>
+            </div>
+          </section>
+
+          <section class="resume-sec">
+            <h4 class="resume-sec-title">EDUCATION</h4>
+            <div class="resume-entry">
+              <div class="entry-header">
+                <strong>Bachelor of Technology (B.Tech) in Computer Science &amp; Engineering</strong>
+              </div>
+              <p>Solid foundation in Algorithms, Data Structures, Database Management, and Software Engineering.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT ARCHITECTURE MODAL -->
+  <div id="project-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-container project-modal-box">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i data-lucide="layers"></i>
+          <h3 id="modal-project-title">Project Overview</h3>
+        </div>
+        <button id="close-project-modal" class="modal-close-btn" aria-label="Close modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-project-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo-box">DR</div>
+        <div>
+          <span class="footer-brand-name">Dinesh Rajkumar</span>
+          <p class="footer-tagline">Turning ideas into intelligent products.</p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://wa.me/919894141152" target="_blank" rel="noopener noreferrer" class="social-btn" title="WhatsApp">
+          <i data-lucide="message-circle"></i>
+        </a>
+        <a href="https://github.com/dinesh22032003" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+          <i data-lucide="github"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Dinesh Rajkumar. Designed with precision &amp; modern 3D web technology.</p>
+      <a href="#hero" class="back-to-top" aria-label="Scroll back to top">
+        <span>Back to Top</span>
+        <i data-lucide="chevron-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="main.js"></script>
+</body>
+</html>
